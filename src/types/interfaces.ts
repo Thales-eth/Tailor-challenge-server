@@ -26,3 +26,34 @@ export interface UserInterface {
     personalPhotos?: Types.ObjectId[];
     favoritePhotos?: Types.ObjectId[];
 }
+
+export interface ReviewInterface {
+    name: string,
+    date: string,
+    rating: number,
+    comments: string
+}
+
+export interface OperatingHours {
+    Monday: string,
+    Tuesday: string,
+    Wednesday: string,
+    Thursday: string,
+    Friday: string,
+    Saturday: string,
+    Sunday: string
+}
+
+export interface ModelAdaptedRestaurant {
+    name: string,
+    neighborhood: string,
+    address: string,
+    location: {
+        type: string,
+        coordinates: number[]
+    },
+    image: string,
+    cuisine_type: string,
+    operating_hours: OperatingHours,
+    reviews: ReviewInterface[]
+}

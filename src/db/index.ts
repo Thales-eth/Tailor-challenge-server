@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 
 const MONGO_URI: string =
-    process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/ts-test";
+    process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/tailor-challenge";
 
 mongoose
     .set("strictQuery", true)

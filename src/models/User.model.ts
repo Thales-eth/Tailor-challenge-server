@@ -36,6 +36,7 @@ const userSchema = new Schema(
                 :
                 value
         },
+        favoriteRestaurants: [{ type: Schema.Types.ObjectId, ref: "Restaurant" }]
     },
     {
         timestamps: true
