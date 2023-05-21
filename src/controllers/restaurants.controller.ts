@@ -18,6 +18,7 @@ export const getOneRestaurant = (req: Request, res: Response) => {
 
     Restaurant
         .findById(restaurant_id)
+        .select("-createdAt -updatedAt -__v")
         .then(restaurant => res.status(200).json(restaurant))
         .catch(err => res.status(500).json({ err: err.message }))
 }
@@ -37,6 +38,7 @@ export const editOneRestaurant = (req: Request, res: Response, next: NextFunctio
 
     Restaurant
         .findByIdAndUpdate(restaurant_id, { name, neighborhood, address, location, image, cuisine_type, operating_hours, reviews }, { new: true })
+        .select("-createdAt -updatedAt -__v")
         .then(editedRestaurant => res.status(200).json(editedRestaurant))
         .catch(err => res.status(500).json({ err: err.message }))
 }

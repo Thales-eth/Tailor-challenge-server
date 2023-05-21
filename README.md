@@ -42,20 +42,22 @@ In the root directory of the project, you will find a JSON file called "####". T
 | :--------------------------:|:-----------------:| :--------------------------------:| :----------------------------:|
 | /api/restaurants/list       | GET               | [restaurants]                     | Get all restaurants     |
 | /api/restaurants/getOne/:restaurant_id            | GET               | {restaurant}                | Get one Restaurant     |
-| /api/restaurants/create            | POST               | [restaurants]                | Create Restaurant      |
-| /api/restaurants/edit/:restaurant_id            | PUT               | [restaurants]                | Edit one restaurant     |
-| /api/restaurants/delete/:restaurant_id            | DELETE               | {msg: "Successfully deleted restaurant"}                | Delete one restaurant     |
+| /api/restaurants/create            | POST               | {createdRestaurant}                | Create Restaurant      |
+| /api/restaurants/edit/:restaurant_id            | PUT               | {editedRestaurant}                | Edit one restaurant     |
+| /api/restaurants/delete/:restaurant_id            | DELETE               | {msg: "Restaurant successfully deleted!" }                | Delete one restaurant     |
 
 ## **User routes**:
 
 | URL path                    | HTTP Method       | Response                          | Action                        |
 | :--------------------------:|:-----------------:| :--------------------------------:| :----------------------------:|
-| /api/users/...              | GET               | [users]                           | Get Home Page Displayed Users |
+| /api/users/getFavoriteRestaurants              | GET               | [restaurants]                           | Get logged user's favorite restaurants |
+| /api/users/likeRestaurant/:restaurant_id              | PUT               | {updatedUser}                           | Like Restaurant |
+| /api/users/dislikeRestaurant/:restaurant_id              | PUT               | {updatedUser}                           | Dislike Restaurant |
 
 ## **Auth routes**:
 
 | URL path                    | HTTP Method       | Response                          | Action                        |
 | :--------------------------:|:-----------------:| :--------------------------------:| :----------------------------:|
-| /api/auth/getLoggedUser     | GET               | {user}                            | Get Logged User             |
-| /api/auth/signup            | POST              | {message: 'New User created!'}    | Create a new user             |
+| /api/auth/getLoggedUser     | GET               | {loggedUser}                            | Get Logged User             |
+| /api/auth/signup            | POST              | {createdUser}    | Create a new user             |
 | /api/auth/login             | POST              | {authToken}                       | Log user in             |

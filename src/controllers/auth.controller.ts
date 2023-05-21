@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from "express";
-import { extendedPayloadRequest, UserModel } from '@/types/interfaces'
+import { ExtendedPayloadRequest, UserModel } from '@/types/interfaces'
 import User from '@/models/User.model'
 
-export const getLoggedUser = (req: extendedPayloadRequest, res: Response) => {
+export const getLoggedUser = (req: ExtendedPayloadRequest, res: Response) => {
     const { _id: user_id } = req.payload
 
     User
@@ -15,9 +15,9 @@ export const getLoggedUser = (req: extendedPayloadRequest, res: Response) => {
 }
 
 export const login = (req: Request, res: Response, next: NextFunction) => {
-    const { email, password } = req.body
+    const { email, password: plainPassword } = req.body
 
-    if (email === '' || password === '') {
+    if (email === '' || plainPassword === '') {
         res.status(400).json({ err: ["Provide email and password."] });
         return;
     }
@@ -25,7 +25,7 @@ export const login = (req: Request, res: Response, next: NextFunction) => {
     User
         .findOne<UserModel>({ email })
         .then((user: UserModel) => {
-            if (!user || !user.comparePassword) {
+            if (!user || !user.comparePassword(plainPassword)) {
                 res.status(401).json({ err: ["Wrong User or Password"] })
                 return
             }
@@ -37,6 +37,7 @@ export const login = (req: Request, res: Response, next: NextFunction) => {
 }
 
 export const signup = (req: Request, res: Response, next: NextFunction) => {
+    // AÑADIR AVATAR...
     const { username, email, password }: { username: string, email: string, password: string } = req.body
 
     User

@@ -2,7 +2,7 @@ import { Request } from "express";
 import { Document } from "mongoose"
 import { Types } from 'mongoose'
 
-export interface extendedPayloadRequest extends Request {
+export interface ExtendedPayloadRequest extends Request {
     payload: {
         _id: string;
     }
