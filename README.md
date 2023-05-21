@@ -1,6 +1,6 @@
 # Let Him Cook Server 
 
-"Let Him Cook" platform that #####
+"Let Him Cook" is a platform that #####
 
 # Deployed API
 
@@ -25,14 +25,14 @@ This file must include all of these environment variables:
 - TOKEN_SECRET
 - SALT
 
-To install all the dependencies used in the project, simply run the command:
+To install all the dependencies used in the project, simply run the command!:
 ```
 npm install
 ```
 
 # Postman Collection
 
-In the root directory of the project, you will find a JSON file called "####". Throughout the development of this project, Postman is used to test our API. This file can be imported directly as a collection in Postman to view all the testing work. The requests are organized by folders according to their corresponding routes. Each request includes different examples of responses and error handling.
+In the root directory of the project, you will find a JSON file called "Tailor_Challenge.postman_collection.json". Throughout the development of this project, Postman is used to test our API. This file can be imported directly as a collection in Postman to view all the testing work. The requests are organized by folders according to their corresponding routes. Each request includes different examples of responses and error handling (if needed).
 
 # API Routes
 

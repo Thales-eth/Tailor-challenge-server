@@ -1,0 +1,1526 @@
+{
+	"info": {
+		"_postman_id": "f66a3cc9-f014-4d2a-91d5-c1affa64d4d0",
+		"name": "Tailor Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21704274"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Get Logged User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY4ZDE4NzA4YWEzM2MwNGJjZDI4OTUiLCJlbWFpbCI6InBvcGlub0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6IlBvcGlubyIsImlhdCI6MTY4NDU5MTI4MCwiZXhwIjoxNjg0NzY0MDgwfQ.Mu7Ba9wXdjTFs8ZhnFadZ0OF_EpN6RVjMTfS2AgrsPQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/auth/getLoggedUser",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"getLoggedUser"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Logged User query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/auth/getLoggedUser",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"getLoggedUser"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "350"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15e-GqgQvme6E6Ca6CTj+gdVmQouOcY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 14:12:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6468d18708aa33c04bcd2895\",\n    \"username\": \"Popino\",\n    \"email\": \"popino@gmail.com\",\n    \"password\": \"$2a$10$j18Xk6VTiw7UbaW8IIv.7e67E81UWpW7KS7vFzuWTR63YzVKZ0d/.\",\n    \"avatar\": \"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80\",\n    \"favoriteRestaurants\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "German",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "german@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/signup",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "Popino",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "popino@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/signup",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "436"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b4-TO2WMb7RumEagm8WVEOOuycPtAU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 13:56:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"Popino\",\n    \"email\": \"popino@gmail.com\",\n    \"password\": \"$2a$10$j18Xk6VTiw7UbaW8IIv.7e67E81UWpW7KS7vFzuWTR63YzVKZ0d/.\",\n    \"avatar\": \"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80\",\n    \"favoriteRestaurants\": [],\n    \"_id\": \"6468d18708aa33c04bcd2895\",\n    \"createdAt\": \"2023-05-20T13:56:23.979Z\",\n    \"updatedAt\": \"2023-05-20T13:56:23.979Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "Invalid Email Structure",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "Popino",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "popinogmail.com",
+											"description": "No \"@\" sign. Regex rejection",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/signup",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-sjRPqruJUmTjUJHHoVviuWZVVhs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 14:07:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": [\n        \"Choose a valid email\"\n    ]\n}"
+						},
+						{
+							"name": "Invalid Duplicate Username",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "Popino",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "popino@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/signup",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-WvCHVwTq5cwPf+xlthj+GDov54c\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 14:08:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": [\n        \"username Popino already in use!\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "popino@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "popino@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fb-95PIRCkt8OxmMozzidL/Bj1qm6M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 13:57:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"authToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY4ZDE4NzA4YWEzM2MwNGJjZDI4OTUiLCJlbWFpbCI6InBvcGlub0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6IlBvcGlubyIsImlhdCI6MTY4NDU5MTA0NiwiZXhwIjoxNjg0NzYzODQ2fQ.wt39MIN1jJTNiJFo0KWPQUkCIIEDEiQCcHOPsnrI__g\"\n}"
+						},
+						{
+							"name": "No password login attempt",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "password",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "popino@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-s0xO6xRpPDBjAR46oVh0U7vegAk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 13:58:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": [\n        \"Provide email and password.\"\n    ]\n}"
+						},
+						{
+							"name": "Wrong Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "password",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "popino@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-MIisOuwmPukCiIJ3SiAqR26rcPQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 14:00:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": [\n        \"Wrong User or Password\"\n    ]\n}"
+						},
+						{
+							"name": "Wrong Email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "popo@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-MIisOuwmPukCiIJ3SiAqR26rcPQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 14:00:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": [\n        \"Wrong User or Password\"\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Restaurants",
+			"item": [
+				{
+					"name": "Get All Restaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/restaurants/list",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"restaurants",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful List Query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/restaurants/list",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"restaurants",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21891"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5583-jzUGF3GKkOjjwRHG0OwLJBm5zGQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 13:53:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6468d0b41b01e8681fa72111\",\n        \"name\": \"Mom's Spaghetti\",\n        \"neighborhood\": \"The Bronx\",\n        \"address\": \"141 W 175TH ST\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.84870400380681,\n                -73.92039932023916\n            ]\n        },\n        \"image\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1684590458/hans-vivek-sLPRSdxsMUA-unsplash_medode.jpg\",\n        \"cuisine_type\": \"American\",\n        \"operating_hours\": {\n            \"Monday\": \"5:30 pm - 11:00 pm\",\n            \"Tuesday\": \"5:30 pm - 12:00 am\",\n            \"Wednesday\": \"5:30 pm - 12:00 am\",\n            \"Thursday\": \"5:30 pm - 12:00 am\",\n            \"Friday\": \"5:30 pm - 12:00 am\",\n            \"Saturday\": \"12:00 pm - 4:00 pm, 5:30 pm - 12:00 am\",\n            \"Sunday\": \"12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm\"\n        },\n        \"reviews\": [],\n        \"createdAt\": \"2023-05-20T13:52:52.780Z\",\n        \"updatedAt\": \"2023-05-20T13:52:52.780Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6468ca84daf36fc2e09f4dd5\",\n        \"name\": \"Roberta's Pizza\",\n        \"neighborhood\": \"Brooklyn\",\n        \"address\": \"261 Moore St, Brooklyn, NY 11206\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.705089,\n                -73.933585\n            ]\n        },\n        \"image\": \"https://c8.alamy.com/compes/dp9a5f/robertas-pizza-restaurant-en-east-williamsburg-de-brooklyn-dp9a5f.jpg\",\n        \"cuisine_type\": \"Pizza\",\n        \"operating_hours\": {\n            \"Monday\": \"11:00 am - 12:00 am\",\n            \"Tuesday\": \"11:00 am - 12:00 am\",\n            \"Wednesday\": \"11:00 am - 12:00 am\",\n            \"Thursday\": \"11:00 am - 12:00 am\",\n            \"Friday\": \"11:00 am - 12:00 am\",\n            \"Saturday\": \"10:00 am - 12:00 am\",\n            \"Sunday\": \"10:00 am - 12:00 am\"\n        },\n        \"reviews\": [\n            {\n                \"name\": \"Steve\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dd6\"\n            },\n            {\n                \"name\": \"Raymond\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dd7\"\n            },\n            {\n                \"name\": \"Laurel\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!\",\n                \"_id\": \"6468ca84daf36fc2e09f4dd8\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2023-05-20T13:26:28.577Z\",\n        \"updatedAt\": \"2023-05-20T13:26:28.577Z\"\n    },\n    {\n        \"_id\": \"6468ca84daf36fc2e09f4dd9\",\n        \"name\": \"Hometown BBQ\",\n        \"neighborhood\": \"Brooklyn\",\n        \"address\": \"454 Van Brunt St, Brooklyn, NY 11231\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.674925,\n                -74.016162\n            ]\n        },\n        \"image\": \"https://es.nycgo.com/images/venues/6326/hometownbbq_redhook_brooklyn_nyc_kengoodman_hometownbbq-153-3__x_large.jpg\",\n        \"cuisine_type\": \"American\",\n        \"operating_hours\": {\n            \"Monday\": \"Closed\",\n            \"Tuesday\": \"12:00 pm - 10:00 pm\",\n            \"Wednesday\": \"12:00 pm - 10:00 pm\",\n            \"Thursday\": \"12:00 pm - 10:00 pm\",\n            \"Friday\": \"12:00 pm - 11:00 pm\",\n            \"Saturday\": \"12:00 pm - 11:00 pm\",\n            \"Sunday\": \"12:00 pm - 9:00 pm\"\n        },\n        \"reviews\": [\n            {\n                \"name\": \"Steve\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dda\"\n            },\n            {\n                \"name\": \"Michelle\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!\",\n                \"_id\": \"6468ca84daf36fc2e09f4ddb\"\n            },\n            {\n                \"name\": \"Ai-Mei\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies.\",\n                \"_id\": \"6468ca84daf36fc2e09f4ddc\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2023-05-20T13:26:28.577Z\",\n        \"updatedAt\": \"2023-05-20T13:26:28.577Z\"\n    },\n    {\n        \"_id\": \"6468ca84daf36fc2e09f4ddd\",\n        \"name\": \"Superiority Burger\",\n        \"neighborhood\": \"Manhattan\",\n        \"address\": \"430 E 9th St, New York, NY 10009\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.727397,\n                -73.983645\n            ]\n        },\n        \"image\": \"http://www.wazwu.com/blog/wp-content/uploads/2015/10/img_6912.jpg\",\n        \"cuisine_type\": \"American\",\n        \"operating_hours\": {\n            \"Monday\": \"11:30 am - 10:00 pm\",\n            \"Tuesday\": \"Closed\",\n            \"Wednesday\": \"11:30 am - 10:00 pm\",\n            \"Thursday\": \"11:30 am - 10:00 pm\",\n            \"Friday\": \"11:30 am - 10:00 pm\",\n            \"Saturday\": \"11:30 am - 10:00 pm\",\n            \"Sunday\": \"11:30 am - 10:00 pm\"\n        },\n        \"reviews\": [\n            {\n                \"name\": \"Steve\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dde\"\n            },\n            {\n                \"name\": \"Gabriel\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 5,\n                \"comments\": \"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!\",\n                \"_id\": \"6468ca84daf36fc2e09f4ddf\"\n            },\n            {\n                \"name\": \"Shivi\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.\",\n                \"_id\": \"6468ca84daf36fc2e09f4de0\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2023-05-20T13:26:28.577Z\",\n        \"updatedAt\": \"2023-05-20T13:26:28.577Z\"\n    },\n    {\n        \"_id\": \"6468ca84daf36fc2e09f4de1\",\n        \"name\": \"The Dutch\",\n        \"neighborhood\": \"Manhattan\",\n        \"address\": \"131 Sullivan St, New York, NY 10012\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.726584,\n                -74.002082\n            ]\n        },\n        \"image\": \"https://es.nycgo.com/images/venues/4829/thedutch29_sa_bar-room_sm__x_large.jpg\",\n        \"cuisine_type\": \"American\",\n        \"operating_hours\": {\n            \"Monday\": \"11:30 am - 3:00 pm, 5:30 pm - 11:00 pm\",\n            \"Tuesday\": \"11:30 am - 3:00 pm, 5:30 pm - 11:00 pm\",\n            \"Wednesday\": \"11:30 am - 3:00 pm, 5:30 pm - 11:00 pm\",\n            \"Thursday\": \"11:30 am - 3:00 pm, 5:30 pm - 11:00 pm\",\n            \"Friday\": \"11:30 am - 3:00 pm, 5:30 pm - 11:30 pm\",\n            \"Saturday\": \"10:00 am - 3:00 pm, 5:30 pm - 11:30 pm\",\n            \"Sunday\": \"10:00 am - 3:00 pm, 5:30 pm - 11:00 pm\"\n        },\n        \"reviews\": [\n            {\n                \"name\": \"Steve\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.\",\n                \"_id\": \"6468ca84daf36fc2e09f4de2\"\n            },\n            {\n                \"name\": \"Loren\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.\",\n                \"_id\": \"6468ca84daf36fc2e09f4de3\"\n            },\n            {\n                \"name\": \"Lori\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea.\",\n                \"_id\": \"6468ca84daf36fc2e09f4de4\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2023-05-20T13:26:28.577Z\",\n        \"updatedAt\": \"2023-05-20T13:26:28.577Z\"\n    },\n    {\n        \"_id\": \"6468ca84daf36fc2e09f4de5\",\n        \"name\": \"Mu Ramen\",\n        \"neighborhood\": \"Queens\",\n        \"address\": \"1209 Jackson Ave, Queens, NY 11101\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.743797,\n                -73.950652\n            ]\n        },\n        \"image\": \"https://resizer.otstatic.com/v2/photos/huge/25670650.jpg\",\n        \"cuisine_type\": \"Asian\",\n        \"operating_hours\": {\n            \"Monday\": \"5:00 pm - 10:00 pm\",\n            \"Tuesday\": \"5:00 pm - 10:00 pm\",\n            \"Wednesday\": \"5:00 pm - 10:00 pm\",\n            \"Thursday\": \"5:00 pm - 10:00 pm\",\n            \"Friday\": \"5:00 pm - 11:00 pm\",\n            \"Saturday\": \"5:00 pm - 11:00 pm\",\n            \"Sunday\": \"5:00 pm - 10:00 pm\"\n        },\n        \"reviews\": [\n            {\n                \"name\": \"Steve\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.\",\n                \"_id\": \"6468ca84daf36fc2e09f4de6\"\n            },\n            {\n                \"name\": \"Brittany\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those.\",\n                \"_id\": \"6468ca84daf36fc2e09f4de7\"\n            },\n            {\n                \"name\": \"Sally\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though.\",\n                \"_id\": \"6468ca84daf36fc2e09f4de8\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2023-05-20T13:26:28.577Z\",\n        \"updatedAt\": \"2023-05-20T13:26:28.577Z\"\n    },\n    {\n        \"_id\": \"6468ca84daf36fc2e09f4de9\",\n        \"name\": \"Casa Enrique\",\n        \"neighborhood\": \"Queens\",\n        \"address\": \"5-48 49th Ave, Queens, NY 11101\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.743394,\n                -73.954235\n            ]\n        },\n        \"image\": \"https://i.pinimg.com/474x/47/b1/d3/47b1d3175589f19f58a35cfcd78b3e73--city-restaurants-mexican-restaurants.jpg\",\n        \"cuisine_type\": \"Mexican\",\n        \"operating_hours\": {\n            \"Monday\": \"5:00 pm - 12:00 am\",\n            \"Tuesday\": \"5:00 pm - 12:00 am\",\n            \"Wednesday\": \"5:00 pm - 12:00 am\",\n            \"Thursday\": \"5:00 pm - 12:00 am\",\n            \"Friday\": \"5:00 pm - 12:00 am\",\n            \"Saturday\": \"11:00 am - 12:00 am\",\n            \"Sunday\": \"11:00 am - 12:00 am\"\n        },\n        \"reviews\": [\n            {\n                \"name\": \"Steve\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 5,\n                \"comments\": \"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dea\"\n            },\n            {\n                \"name\": \"Rob\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 5,\n                \"comments\": \"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome\",\n                \"_id\": \"6468ca84daf36fc2e09f4deb\"\n            },\n            {\n                \"name\": \"Jason\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dec\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2023-05-20T13:26:28.577Z\",\n        \"updatedAt\": \"2023-05-20T13:26:28.577Z\"\n    },\n    {\n        \"_id\": \"6468ca84daf36fc2e09f4dc9\",\n        \"name\": \"Emily\",\n        \"neighborhood\": \"Brooklyn\",\n        \"address\": \"919 Fulton St, Brooklyn, NY 11238\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.683555,\n                -73.966393\n            ]\n        },\n        \"image\": \"https://media-cdn.tripadvisor.com/media/photo-s/17/07/cd/40/the-colony-and-vodka.jpg\",\n        \"cuisine_type\": \"Pizza\",\n        \"operating_hours\": {\n            \"Monday\": \"5:30 pm - 11:00 pm\",\n            \"Tuesday\": \"5:30 pm - 11:00 pm\",\n            \"Wednesday\": \"5:30 pm - 11:00 pm\",\n            \"Thursday\": \"5:30 pm - 11:00 pm\",\n            \"Friday\": \"5:30 pm - 11:00 pm\",\n            \"Saturday\": \"5:00 pm - 11:30 pm\",\n            \"Sunday\": \"12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm\"\n        },\n        \"reviews\": [\n            {\n                \"name\": \"Steph\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dca\"\n            },\n            {\n                \"name\": \"Steve\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dcb\"\n            },\n            {\n                \"name\": \"Sam\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 5,\n                \"comments\": \"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dcc\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2023-05-20T13:26:28.576Z\",\n        \"updatedAt\": \"2023-05-20T13:26:28.576Z\"\n    },\n    {\n        \"_id\": \"6468ca84daf36fc2e09f4dcd\",\n        \"name\": \"Kang Ho Dong Baekjeong\",\n        \"neighborhood\": \"Manhattan\",\n        \"address\": \"1 E 32nd St, New York, NY 10016\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.747143,\n                -73.985414\n            ]\n        },\n        \"image\": \"https://media-cdn.tripadvisor.com/media/photo-s/06/da/d6/de/kang-hodong-baekjeong.jpg\",\n        \"cuisine_type\": \"Asian\",\n        \"operating_hours\": {\n            \"Monday\": \"11:30 am - 2:00 am\",\n            \"Tuesday\": \"11:30 am - 2:00 am\",\n            \"Wednesday\": \"11:30 am - 2:00 am\",\n            \"Thursday\": \"11:30 am - 2:00 am\",\n            \"Friday\": \"11:30 am - 6:00 am\",\n            \"Saturday\": \"11:30 am - 6:00 am\",\n            \"Sunday\": \"11:30 am - 2:00 am\"\n        },\n        \"reviews\": [\n            {\n                \"name\": \"Steve\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dce\"\n            },\n            {\n                \"name\": \"ZS\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 5,\n                \"comments\": \"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. \",\n                \"_id\": \"6468ca84daf36fc2e09f4dcf\"\n            },\n            {\n                \"name\": \"Emily\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 2,\n                \"comments\": \"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!\",\n                \"_id\": \"6468ca84daf36fc2e09f4dd0\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2023-05-20T13:26:28.576Z\",\n        \"updatedAt\": \"2023-05-20T13:26:28.576Z\"\n    },\n    {\n        \"_id\": \"6468ca84daf36fc2e09f4dd1\",\n        \"name\": \"Katz's Delicatessen\",\n        \"neighborhood\": \"Manhattan\",\n        \"address\": \"205 E Houston St, New York, NY 10002\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.722216,\n                -73.987501\n            ]\n        },\n        \"image\": \"https://www.livingfla.com/wp-content/uploads/2019/04/katz-1-500.jpg\",\n        \"cuisine_type\": \"American\",\n        \"operating_hours\": {\n            \"Monday\": \"8:00 am - 10:30 pm\",\n            \"Tuesday\": \"8:00 am - 10:30 pm\",\n            \"Wednesday\": \"8:00 am - 10:30 pm\",\n            \"Thursday\": \"8:00 am - 2:30 am\",\n            \"Friday\": \"8:00 am - Sat\",\n            \"Saturday\": \"Open 24 hours\",\n            \"Sunday\": \"Sat - 10:30 pm\"\n        },\n        \"reviews\": [\n            {\n                \"name\": \"Steve\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 5,\n                \"comments\": \"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dd2\"\n            },\n            {\n                \"name\": \"Allen\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 5,\n                \"comments\": \"If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!\",\n                \"_id\": \"6468ca84daf36fc2e09f4dd3\"\n            },\n            {\n                \"name\": \"David\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 2,\n                \"comments\": \"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dd4\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2023-05-20T13:26:28.576Z\",\n        \"updatedAt\": \"2023-05-20T13:26:28.576Z\"\n    },\n    {\n        \"_id\": \"6468ca84daf36fc2e09f4dc5\",\n        \"name\": \"Mission Chinese Food\",\n        \"neighborhood\": \"Manhattan\",\n        \"address\": \"171 E Broadway, New York, NY 10002\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.713829,\n                -73.989667\n            ]\n        },\n        \"image\": \"https://video-images.vice.com/articles/590647db9ac0f921f03ed8d9/lede/1493583856927-mcf_halloween_017.jpeg?crop=1xw:0.8439609902475619xh;center,center&resize=1200:*\",\n        \"cuisine_type\": \"Asian\",\n        \"operating_hours\": {\n            \"Monday\": \"5:30 pm - 11:00 pm\",\n            \"Tuesday\": \"5:30 pm - 12:00 am\",\n            \"Wednesday\": \"5:30 pm - 12:00 am\",\n            \"Thursday\": \"5:30 pm - 12:00 am\",\n            \"Friday\": \"5:30 pm - 12:00 am\",\n            \"Saturday\": \"12:00 pm - 4:00 pm, 5:30 pm - 12:00 am\",\n            \"Sunday\": \"12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm\"\n        },\n        \"reviews\": [\n            {\n                \"name\": \"Steve\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dc6\"\n            },\n            {\n                \"name\": \"Morgan\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!\",\n                \"_id\": \"6468ca84daf36fc2e09f4dc7\"\n            },\n            {\n                \"name\": \"Jason\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 3,\n                \"comments\": \"I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dc8\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2023-05-20T13:26:28.575Z\",\n        \"updatedAt\": \"2023-05-20T13:26:28.575Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get One Restaurant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/restaurants/getOne/:restaurant_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"restaurants",
+								"getOne",
+								":restaurant_id"
+							],
+							"variable": [
+								{
+									"key": "restaurant_id",
+									"value": "6468d0b41b01e8681fa72111"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Single Query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/restaurants/getOne/:restaurant_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"restaurants",
+										"getOne",
+										":restaurant_id"
+									],
+									"variable": [
+										{
+											"key": "restaurant_id",
+											"value": "6468d0b41b01e8681fa72111"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "712"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c8-K1ClD5pxtqVu1Bxv9suga4J68Gs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 13:53:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"location\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n            40.84870400380681,\n            -73.92039932023916\n        ]\n    },\n    \"operating_hours\": {\n        \"Monday\": \"5:30 pm - 11:00 pm\",\n        \"Tuesday\": \"5:30 pm - 12:00 am\",\n        \"Wednesday\": \"5:30 pm - 12:00 am\",\n        \"Thursday\": \"5:30 pm - 12:00 am\",\n        \"Friday\": \"5:30 pm - 12:00 am\",\n        \"Saturday\": \"12:00 pm - 4:00 pm, 5:30 pm - 12:00 am\",\n        \"Sunday\": \"12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm\"\n    },\n    \"_id\": \"6468d0b41b01e8681fa72111\",\n    \"name\": \"Mom's Spaghetti\",\n    \"neighborhood\": \"The Bronx\",\n    \"address\": \"141 W 175TH ST\",\n    \"image\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1684590458/hans-vivek-sLPRSdxsMUA-unsplash_medode.jpg\",\n    \"cuisine_type\": \"American\",\n    \"reviews\": [],\n    \"createdAt\": \"2023-05-20T13:52:52.780Z\",\n    \"updatedAt\": \"2023-05-20T13:52:52.780Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mom's Spaghetti\",\r\n    \"neighborhood\": \"The Bronx\",\r\n    \"address\": \"141 W 175TH ST\",\r\n    \"location\": {\r\n        \"type\": \"Point\",\r\n        \"coordinates\": [40.84870400380681, -73.92039932023916]\r\n    },\r\n    \"image\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1684590458/hans-vivek-sLPRSdxsMUA-unsplash_medode.jpg\",\r\n    \"cuisine_type\": \"American\",\r\n    \"operating_hours\": {\r\n        \"Monday\": \"5:30 pm - 11:00 pm\",\r\n        \"Tuesday\": \"5:30 pm - 12:00 am\",\r\n        \"Wednesday\": \"5:30 pm - 12:00 am\",\r\n        \"Thursday\": \"5:30 pm - 12:00 am\",\r\n        \"Friday\": \"5:30 pm - 12:00 am\",\r\n        \"Saturday\": \"12:00 pm - 4:00 pm, 5:30 pm - 12:00 am\",\r\n        \"Sunday\": \"12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm\"\r\n    },\r\n    \"reviews\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/restaurants/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"restaurants",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Restaurant Creation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Mom's Spaghetti\",\r\n    \"neighborhood\": \"The Bronx\",\r\n    \"address\": \"141 W 175TH ST\",\r\n    \"location\": {\r\n        \"type\": \"Point\",\r\n        \"coordinates\": [40.84870400380681, -73.92039932023916]\r\n    },\r\n    \"image\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1684590458/hans-vivek-sLPRSdxsMUA-unsplash_medode.jpg\",\r\n    \"cuisine_type\": \"American\",\r\n    \"operating_hours\": {\r\n        \"Monday\": \"5:30 pm - 11:00 pm\",\r\n        \"Tuesday\": \"5:30 pm - 12:00 am\",\r\n        \"Wednesday\": \"5:30 pm - 12:00 am\",\r\n        \"Thursday\": \"5:30 pm - 12:00 am\",\r\n        \"Friday\": \"5:30 pm - 12:00 am\",\r\n        \"Saturday\": \"12:00 pm - 4:00 pm, 5:30 pm - 12:00 am\",\r\n        \"Sunday\": \"12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm\"\r\n    },\r\n    \"reviews\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/restaurants/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"restaurants",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "712"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c8-rmx09DpZmVUHw7LuFA0e1BXut64\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 13:52:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Mom's Spaghetti\",\n    \"neighborhood\": \"The Bronx\",\n    \"address\": \"141 W 175TH ST\",\n    \"location\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n            40.84870400380681,\n            -73.92039932023916\n        ]\n    },\n    \"image\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1684590458/hans-vivek-sLPRSdxsMUA-unsplash_medode.jpg\",\n    \"cuisine_type\": \"American\",\n    \"operating_hours\": {\n        \"Monday\": \"5:30 pm - 11:00 pm\",\n        \"Tuesday\": \"5:30 pm - 12:00 am\",\n        \"Wednesday\": \"5:30 pm - 12:00 am\",\n        \"Thursday\": \"5:30 pm - 12:00 am\",\n        \"Friday\": \"5:30 pm - 12:00 am\",\n        \"Saturday\": \"12:00 pm - 4:00 pm, 5:30 pm - 12:00 am\",\n        \"Sunday\": \"12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm\"\n    },\n    \"reviews\": [],\n    \"_id\": \"6468d0b41b01e8681fa72111\",\n    \"createdAt\": \"2023-05-20T13:52:52.780Z\",\n    \"updatedAt\": \"2023-05-20T13:52:52.780Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit One Restaurant",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mom's Spaghetti\",\r\n    \"neighborhood\": \"The Bronxxx\",\r\n    \"address\": \"141 W 175TH ST\",\r\n    \"location\": {\r\n        \"type\": \"Point\",\r\n        \"coordinates\": [40.84870400380681, -73.92039932023916]\r\n    },\r\n    \"image\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1684590458/hans-vivek-sLPRSdxsMUA-unsplash_medode.jpg\",\r\n    \"cuisine_type\": \"American\",\r\n    \"operating_hours\": {\r\n        \"Monday\": \"5:30 pm - 11:00 pm\",\r\n        \"Tuesday\": \"5:30 pm - 12:00 am\",\r\n        \"Wednesday\": \"5:30 pm - 12:00 am\",\r\n        \"Thursday\": \"5:30 pm - 12:00 am\",\r\n        \"Friday\": \"5:30 pm - 12:00 am\",\r\n        \"Saturday\": \"12:00 pm - 4:00 pm, 5:30 pm - 12:00 am\",\r\n        \"Sunday\": \"12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm\"\r\n    },\r\n    \"reviews\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/restaurants/edit/:restaurant_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"restaurants",
+								"edit",
+								":restaurant_id"
+							],
+							"variable": [
+								{
+									"key": "restaurant_id",
+									"value": "6468d02b1b01e8681fa7210c"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Edit Query",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Mom's Spaghetti\",\r\n    \"neighborhood\": \"The Bronxxx\",\r\n    \"address\": \"141 W 175TH ST\",\r\n    \"location\": {\r\n        \"type\": \"Point\",\r\n        \"coordinates\": [40.84870400380681, -73.92039932023916]\r\n    },\r\n    \"image\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1684590458/hans-vivek-sLPRSdxsMUA-unsplash_medode.jpg\",\r\n    \"cuisine_type\": \"American\",\r\n    \"operating_hours\": {\r\n        \"Monday\": \"5:30 pm - 11:00 pm\",\r\n        \"Tuesday\": \"5:30 pm - 12:00 am\",\r\n        \"Wednesday\": \"5:30 pm - 12:00 am\",\r\n        \"Thursday\": \"5:30 pm - 12:00 am\",\r\n        \"Friday\": \"5:30 pm - 12:00 am\",\r\n        \"Saturday\": \"12:00 pm - 4:00 pm, 5:30 pm - 12:00 am\",\r\n        \"Sunday\": \"12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm\"\r\n    },\r\n    \"reviews\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/restaurants/edit/:restaurant_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"restaurants",
+										"edit",
+										":restaurant_id"
+									],
+									"variable": [
+										{
+											"key": "restaurant_id",
+											"value": "6468d02b1b01e8681fa7210c"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "714"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2ca-IdABRHxJgowJJ+xE93Re1q5xEGc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 13:52:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"location\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n            40.84870400380681,\n            -73.92039932023916\n        ]\n    },\n    \"operating_hours\": {\n        \"Monday\": \"5:30 pm - 11:00 pm\",\n        \"Tuesday\": \"5:30 pm - 12:00 am\",\n        \"Wednesday\": \"5:30 pm - 12:00 am\",\n        \"Thursday\": \"5:30 pm - 12:00 am\",\n        \"Friday\": \"5:30 pm - 12:00 am\",\n        \"Saturday\": \"12:00 pm - 4:00 pm, 5:30 pm - 12:00 am\",\n        \"Sunday\": \"12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm\"\n    },\n    \"_id\": \"6468d02b1b01e8681fa7210c\",\n    \"name\": \"Mom's Spaghetti\",\n    \"neighborhood\": \"The Bronxxx\",\n    \"address\": \"141 W 175TH ST\",\n    \"image\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1684590458/hans-vivek-sLPRSdxsMUA-unsplash_medode.jpg\",\n    \"cuisine_type\": \"American\",\n    \"reviews\": [],\n    \"createdAt\": \"2023-05-20T13:50:35.174Z\",\n    \"updatedAt\": \"2023-05-20T13:52:27.239Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete One Restaurant",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/restaurants/delete/:restaurant_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"restaurants",
+								"delete",
+								":restaurant_id"
+							],
+							"variable": [
+								{
+									"key": "restaurant_id",
+									"value": "6468d02b1b01e8681fa7210c"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Delete Query",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/restaurants/delete/:restaurant_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"restaurants",
+										"delete",
+										":restaurant_id"
+									],
+									"variable": [
+										{
+											"key": "restaurant_id",
+											"value": "6468d02b1b01e8681fa7210c"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-wde6PbC10b4Xmz5FRz3r5d1Duu8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 13:52:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Restaurant successfully deleted!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Favorite Restaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/getFavoriteRestaurants",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"getFavoriteRestaurants"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful List Query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/getFavoriteRestaurants",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"getFavoriteRestaurants"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2779"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"adb-LnCbCGmuipa+rqLWrGaviYHII+E\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 14:50:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.84870400380681,\n                -73.92039932023916\n            ]\n        },\n        \"operating_hours\": {\n            \"Monday\": \"5:30 pm - 11:00 pm\",\n            \"Tuesday\": \"5:30 pm - 12:00 am\",\n            \"Wednesday\": \"5:30 pm - 12:00 am\",\n            \"Thursday\": \"5:30 pm - 12:00 am\",\n            \"Friday\": \"5:30 pm - 12:00 am\",\n            \"Saturday\": \"12:00 pm - 4:00 pm, 5:30 pm - 12:00 am\",\n            \"Sunday\": \"12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm\"\n        },\n        \"_id\": \"6468d0b41b01e8681fa72111\",\n        \"name\": \"Mom's Spaghetti\",\n        \"neighborhood\": \"The Bronx\",\n        \"address\": \"141 W 175TH ST\",\n        \"image\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1684590458/hans-vivek-sLPRSdxsMUA-unsplash_medode.jpg\",\n        \"cuisine_type\": \"American\",\n        \"reviews\": [],\n        \"createdAt\": \"2023-05-20T13:52:52.780Z\",\n        \"updatedAt\": \"2023-05-20T13:52:52.780Z\",\n        \"__v\": 0\n    },\n    {\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                40.705089,\n                -73.933585\n            ]\n        },\n        \"operating_hours\": {\n            \"Monday\": \"11:00 am - 12:00 am\",\n            \"Tuesday\": \"11:00 am - 12:00 am\",\n            \"Wednesday\": \"11:00 am - 12:00 am\",\n            \"Thursday\": \"11:00 am - 12:00 am\",\n            \"Friday\": \"11:00 am - 12:00 am\",\n            \"Saturday\": \"10:00 am - 12:00 am\",\n            \"Sunday\": \"10:00 am - 12:00 am\"\n        },\n        \"_id\": \"6468ca84daf36fc2e09f4dd5\",\n        \"name\": \"Roberta's Pizza\",\n        \"neighborhood\": \"Brooklyn\",\n        \"address\": \"261 Moore St, Brooklyn, NY 11206\",\n        \"image\": \"https://c8.alamy.com/compes/dp9a5f/robertas-pizza-restaurant-en-east-williamsburg-de-brooklyn-dp9a5f.jpg\",\n        \"cuisine_type\": \"Pizza\",\n        \"reviews\": [\n            {\n                \"name\": \"Steve\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dd6\"\n            },\n            {\n                \"name\": \"Raymond\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick.\",\n                \"_id\": \"6468ca84daf36fc2e09f4dd7\"\n            },\n            {\n                \"name\": \"Laurel\",\n                \"date\": \"2016-10-25T22:00:00.000Z\",\n                \"rating\": 4,\n                \"comments\": \"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!\",\n                \"_id\": \"6468ca84daf36fc2e09f4dd8\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2023-05-20T13:26:28.577Z\",\n        \"updatedAt\": \"2023-05-20T13:26:28.577Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Like Restaurant",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/likeRestaurant/:restaurant_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"likeRestaurant",
+								":restaurant_id"
+							],
+							"variable": [
+								{
+									"key": "restaurant_id",
+									"value": "6468ca84daf36fc2e09f4dd5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Like",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/likeRestaurant/:restaurant_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"likeRestaurant",
+										":restaurant_id"
+									],
+									"variable": [
+										{
+											"key": "restaurant_id",
+											"value": "6468ca84daf36fc2e09f4dd5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "489"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e9-ScsGcByKXgBTeEEXvaKbyh0sd6I\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 14:49:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6468d18708aa33c04bcd2895\",\n    \"username\": \"Popino\",\n    \"email\": \"popino@gmail.com\",\n    \"password\": \"$2a$10$j18Xk6VTiw7UbaW8IIv.7e67E81UWpW7KS7vFzuWTR63YzVKZ0d/.\",\n    \"avatar\": \"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80\",\n    \"favoriteRestaurants\": [\n        \"6468d0b41b01e8681fa72111\",\n        \"6468ca84daf36fc2e09f4dd5\"\n    ],\n    \"createdAt\": \"2023-05-20T13:56:23.979Z\",\n    \"updatedAt\": \"2023-05-20T14:49:32.850Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Dislike Restaurant",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/dislikeRestaurant/:restaurant_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"dislikeRestaurant",
+								":restaurant_id"
+							],
+							"variable": [
+								{
+									"key": "restaurant_id",
+									"value": "6468d0b41b01e8681fa72111"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Dislike",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/dislikeRestaurant/:restaurant_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"dislikeRestaurant",
+										":restaurant_id"
+									],
+									"variable": [
+										{
+											"key": "restaurant_id",
+											"value": "6468d0b41b01e8681fa72111"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "436"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b4-YVWs0IY3FtwUSV8lDk+DiwoNHgs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 May 2023 14:49:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6468d18708aa33c04bcd2895\",\n    \"username\": \"Popino\",\n    \"email\": \"popino@gmail.com\",\n    \"password\": \"$2a$10$j18Xk6VTiw7UbaW8IIv.7e67E81UWpW7KS7vFzuWTR63YzVKZ0d/.\",\n    \"avatar\": \"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80\",\n    \"favoriteRestaurants\": [],\n    \"createdAt\": \"2023-05-20T13:56:23.979Z\",\n    \"updatedAt\": \"2023-05-20T14:49:00.047Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY4ZDE4NzA4YWEzM2MwNGJjZDI4OTUiLCJlbWFpbCI6InBvcGlub0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6IlBvcGlubyIsImlhdCI6MTY4NDU5MzEwMSwiZXhwIjoxNjg0NzY1OTAxfQ.iGlM1qDlSFOdYTtTccXX3W1gkrQHqMMpc-TJ2aTj9JU",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Upload",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/upload",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Photo Upload",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "imageUrl",
+											"type": "file",
+											"src": "/C:/Users/spani/Downloads/hans-vivek-sLPRSdxsMUA-unsplash.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/upload",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"upload"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "102"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"66-caGuqhZ8G3ABuR+vxrLYzU6ZnOk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 08:50:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"https://res.cloudinary.com/dagndlfhj/image/upload/v1684659009/movie-gallery/h1zibseu6xgcbmuvs0ly.jpg\""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:5005/api"
+		}
+	]
+}
