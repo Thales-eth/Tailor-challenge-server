@@ -37,11 +37,19 @@ export const login = (req: Request, res: Response, next: NextFunction) => {
 }
 
 export const signup = (req: Request, res: Response, next: NextFunction) => {
-    // AÑADIR AVATAR...
-    const { username, email, password }: { username: string, email: string, password: string } = req.body
+    const { username, email, password, avatar }: { username: string, email: string, password: string, avatar: string } = req.body
 
+    console.log("EL AVATAR DESDE EL BACK ==>", avatar)
+    // I have not been able to cast createdUser directly to be a UserModel type document
+    // That's why I needed a second query using findById :(
     User
-        .create({ username, email, password })
-        .then(createdUser => res.status(200).json(createdUser))
+        .create({ username, email, password, avatar })
+        .then((createdUser) => {
+            return User.findById<UserModel>(createdUser._id)
+        })
+        .then((foundUser: UserModel) => {
+            const authToken = foundUser.signToken()
+            res.status(200).json({ authToken })
+        })
         .catch(err => next(err))
 }

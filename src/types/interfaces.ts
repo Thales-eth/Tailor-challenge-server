@@ -22,9 +22,8 @@ export interface UserInterface {
     email: string,
     password: number,
     avatar?: string,
-    friends?: Types.ObjectId[];
-    personalPhotos?: Types.ObjectId[];
-    favoritePhotos?: Types.ObjectId[];
+    favoriteRestaurants?: Types.ObjectId[];
+    createdRestaurants?: Types.ObjectId[];
 }
 
 export interface ReviewInterface {

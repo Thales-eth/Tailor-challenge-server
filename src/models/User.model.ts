@@ -1,5 +1,6 @@
 import bcrypt from "bcryptjs"
 import jwt from 'jsonwebtoken'
+import { DEFAULT_AVATAR } from '@/consts/index'
 import { Schema, model } from "mongoose";
 const saltRounds: number = +process.env.SALT
 
@@ -30,13 +31,14 @@ const userSchema = new Schema(
         },
         avatar: {
             type: String,
-            default: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80",
+            default: DEFAULT_AVATAR,
             set: (value: string) => !value ?
-                "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80"
+                DEFAULT_AVATAR
                 :
                 value
         },
-        favoriteRestaurants: [{ type: Schema.Types.ObjectId, ref: "Restaurant" }]
+        favoriteRestaurants: [{ type: Schema.Types.ObjectId, ref: "Restaurant" }],
+        createdRestaurants: [{ type: Schema.Types.ObjectId, ref: "Restaurant" }]
     },
     {
         timestamps: true
