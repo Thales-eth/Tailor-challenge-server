@@ -32,7 +32,7 @@ export const createOneRestaurant = (req: Request, res: Response, next: NextFunct
         .create({ name, neighborhood, address, location, image, cuisine_type, operating_hours, reviews })
         .then(createdRestaurant => User.findByIdAndUpdate(user_id, { $addToSet: { createdRestaurants: createdRestaurant._id } }))
         .then(() => res.sendStatus(201))
-        .catch(err => res.status(500).json({ err: err.message }))
+        .catch(err => next(err))
 }
 
 export const editOneRestaurant = (req: Request, res: Response, next: NextFunction) => {
@@ -43,7 +43,7 @@ export const editOneRestaurant = (req: Request, res: Response, next: NextFunctio
         .findByIdAndUpdate(restaurant_id, { name, neighborhood, address, location, image, cuisine_type, operating_hours, reviews }, { new: true })
         .select("-createdAt -updatedAt -__v")
         .then(editedRestaurant => res.status(200).json(editedRestaurant))
-        .catch(err => res.status(500).json({ err: err.message }))
+        .catch(err => next(err))
 }
 
 export const deleteOneRestaurant = (req: Request, res: Response) => {
