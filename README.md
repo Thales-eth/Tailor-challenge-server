@@ -1,12 +1,13 @@
-# Let Him Cook Server 
+# LET HIM COOK: built using MENN STACK (Mongo, Express, Next.JS, Node)
 
-"Let Him Cook" is a platform that #####
+Let Him Cook is a MENN app that displays some of the coolest restaurants around the world and allows
+experienced users to create more restaurants and display them on the web. 
 
 # Deployed API
 
 The deployed API can be found at the link: "####"
 
-All the routes described in the "API Routes" section are valid endpoints against this URL. For example, "####"
+All the routes described in the "API Routes" section are valid endpoints against this URL. For example, "####/api/restaurants/list"
 
 The complete deployed application can be found at the following link: "####"
 
@@ -42,9 +43,9 @@ In the root directory of the project, you will find a JSON file called "Tailor_C
 | :--------------------------:|:-----------------:| :--------------------------------:| :----------------------------:|
 | /api/restaurants/list       | GET               | [restaurants]                     | Get all restaurants     |
 | /api/restaurants/getOne/:restaurant_id            | GET               | {restaurant}                | Get one Restaurant     |
-| /api/restaurants/create            | POST               | {createdRestaurant}                | Create Restaurant      |
+| /api/restaurants/create/:user_id            | POST               | {createdRestaurant}                | Create Restaurant      |
 | /api/restaurants/edit/:restaurant_id            | PUT               | {editedRestaurant}                | Edit one restaurant     |
-| /api/restaurants/delete/:restaurant_id            | DELETE               | {msg: "Restaurant successfully deleted!" }                | Delete one restaurant     |
+| /api/restaurants/delete/:restaurant_id/:user_id           | DELETE               | {msg: "Restaurant successfully deleted!" }                | Delete one restaurant     |
 
 ## **User routes**:
 
@@ -61,3 +62,9 @@ In the root directory of the project, you will find a JSON file called "Tailor_C
 | /api/auth/getLoggedUser     | GET               | {loggedUser}                            | Get Logged User             |
 | /api/auth/signup            | POST              | {createdUser}    | Create a new user             |
 | /api/auth/login             | POST              | {authToken}                       | Log user in             |
+
+## **Upload routes**:
+
+| URL path                    | HTTP Method       | Response                          | Action                        |
+| :--------------------------:|:-----------------:| :--------------------------------:| :----------------------------:|
+| /api/upload     | POST               | CLOUDINARY_LINK                            | Upload Image to Cloudinary

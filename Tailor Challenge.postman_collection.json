@@ -17,7 +17,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY4ZDE4NzA4YWEzM2MwNGJjZDI4OTUiLCJlbWFpbCI6InBvcGlub0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6IlBvcGlubyIsImlhdCI6MTY4NDU5MTI4MCwiZXhwIjoxNjg0NzY0MDgwfQ.Mu7Ba9wXdjTFs8ZhnFadZ0OF_EpN6RVjMTfS2AgrsPQ",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZjOGYzZjcyODkzZTNmMzQyNDc3ZjQiLCJlbWFpbCI6ImRhbml0b0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6ImRhbml0byIsImlhdCI6MTY4NDgzNjE2MCwiZXhwIjoxNjg1MDA4OTYwfQ.doIBKG3v_Ul-UHxhQAxx5GZdP6rDRg81j-ms3_nC3_E",
 									"type": "string"
 								}
 							]
@@ -104,12 +104,12 @@
 							"urlencoded": [
 								{
 									"key": "username",
-									"value": "German",
+									"value": "danito",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "german@gmail.com",
+									"value": "danito@gmail.com",
 									"type": "text"
 								},
 								{
@@ -377,7 +377,7 @@
 								},
 								{
 									"key": "email",
-									"value": "popino@gmail.com",
+									"value": "popinillo@gmail.com",
 									"type": "text"
 								}
 							]
@@ -778,7 +778,7 @@
 							"variable": [
 								{
 									"key": "restaurant_id",
-									"value": "6468d0b41b01e8681fa72111"
+									"value": "646cfe0922db9219e4fd8f44"
 								}
 							]
 						}
@@ -856,7 +856,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Mom's Spaghetti\",\r\n    \"neighborhood\": \"The Bronx\",\r\n    \"address\": \"141 W 175TH ST\",\r\n    \"location\": {\r\n        \"type\": \"Point\",\r\n        \"coordinates\": [40.84870400380681, -73.92039932023916]\r\n    },\r\n    \"image\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1684590458/hans-vivek-sLPRSdxsMUA-unsplash_medode.jpg\",\r\n    \"cuisine_type\": \"American\",\r\n    \"operating_hours\": {\r\n        \"Monday\": \"5:30 pm - 11:00 pm\",\r\n        \"Tuesday\": \"5:30 pm - 12:00 am\",\r\n        \"Wednesday\": \"5:30 pm - 12:00 am\",\r\n        \"Thursday\": \"5:30 pm - 12:00 am\",\r\n        \"Friday\": \"5:30 pm - 12:00 am\",\r\n        \"Saturday\": \"12:00 pm - 4:00 pm, 5:30 pm - 12:00 am\",\r\n        \"Sunday\": \"12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm\"\r\n    },\r\n    \"reviews\": []\r\n}",
+							"raw": "{\r\n    \"name\": \"Momu Spaghetti\",\r\n    \"neighborhood\": \"The Bronx\",\r\n    \"address\": \"141 W 175TH ST\",\r\n    \"location\": {\r\n        \"type\": \"Point\",\r\n        \"coordinates\": [40.84870400380681, -73.92039932023916]\r\n    },\r\n    \"image\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1684590458/hans-vivek-sLPRSdxsMUA-unsplash_medode.jpg\",\r\n    \"cuisine_type\": \"American\",\r\n    \"operating_hours\": {\r\n        \"Monday\": \"5:30 pm - 11:00 pm\",\r\n        \"Tuesday\": \"5:30 pm - 12:00 am\",\r\n        \"Wednesday\": \"5:30 pm - 12:00 am\",\r\n        \"Thursday\": \"5:30 pm - 12:00 am\",\r\n        \"Friday\": \"5:30 pm - 12:00 am\",\r\n        \"Saturday\": \"12:00 pm - 4:00 pm, 5:30 pm - 12:00 am\",\r\n        \"Sunday\": \"12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm\"\r\n    },\r\n    \"reviews\": []\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -864,13 +864,20 @@
 							}
 						},
 						"url": {
-							"raw": "{{BASE_URL}}/restaurants/create",
+							"raw": "{{BASE_URL}}/restaurants/create/:user_id",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"restaurants",
-								"create"
+								"create",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "646c8f3f72893e3f342477f4"
+								}
 							]
 						}
 					},
@@ -1055,19 +1062,24 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/restaurants/delete/:restaurant_id",
+							"raw": "{{BASE_URL}}/restaurants/delete/:restaurant_id/:user_id",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"restaurants",
 								"delete",
-								":restaurant_id"
+								":restaurant_id",
+								":user_id"
 							],
 							"variable": [
 								{
 									"key": "restaurant_id",
-									"value": "6468d02b1b01e8681fa7210c"
+									"value": "646c8f7d72893e3f342477fa"
+								},
+								{
+									"key": "user_id",
+									"value": "646c8f3f72893e3f342477f4"
 								}
 							]
 						}
@@ -1236,7 +1248,7 @@
 							"variable": [
 								{
 									"key": "restaurant_id",
-									"value": "6468ca84daf36fc2e09f4dd5"
+									"value": "6468d0b41b01e8681fa72111"
 								}
 							]
 						}
@@ -1325,7 +1337,7 @@
 							"variable": [
 								{
 									"key": "restaurant_id",
-									"value": "6468d0b41b01e8681fa72111"
+									"value": "6468ca84daf36fc2e09f4dd5"
 								}
 							]
 						}
@@ -1402,7 +1414,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY4ZDE4NzA4YWEzM2MwNGJjZDI4OTUiLCJlbWFpbCI6InBvcGlub0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6IlBvcGlubyIsImlhdCI6MTY4NDU5MzEwMSwiZXhwIjoxNjg0NzY1OTAxfQ.iGlM1qDlSFOdYTtTccXX3W1gkrQHqMMpc-TJ2aTj9JU",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZhMjc1ZGQ0MDg5NjIyNWViOGJkMzciLCJlbWFpbCI6InBvcGluaWxsb0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6InBvcGluaWxsbyIsImlhdCI6MTY4NDY4NDk5MSwiZXhwIjoxNjg0ODU3NzkxfQ.fnll1uKKI24hMSRD700G2YFHXTyXbY7zFehRxCtir5k",
 						"type": "string"
 					}
 				]
@@ -1436,6 +1448,16 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageUrl",
+									"type": "file",
+									"src": "/C:/Users/spani/Downloads/hans-vivek-sLPRSdxsMUA-unsplash.jpg"
+								}
+							]
+						},
 						"url": {
 							"raw": "{{BASE_URL}}/upload",
 							"host": [

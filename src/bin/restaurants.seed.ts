@@ -1,7 +1,7 @@
+import "@/db"
 import Restaurant from "@/models/Restaurant.model"
 import restaurants from "./restaurants.json"
 import { ModelAdaptedRestaurant } from "@/types/interfaces"
-import "@/db"
 
 const modelAdaptedRestaurants: ModelAdaptedRestaurant[] = restaurants.map(({ name, neighborhood, address, latlng: { lat, lng }, image, cuisine_type, operating_hours, reviews }) => {
     return (

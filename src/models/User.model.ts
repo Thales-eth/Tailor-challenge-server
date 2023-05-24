@@ -2,6 +2,7 @@ import bcrypt from "bcryptjs"
 import jwt from 'jsonwebtoken'
 import { DEFAULT_AVATAR } from '@/consts/index'
 import { Schema, model } from "mongoose";
+
 const saltRounds: number = +process.env.SALT
 
 const userSchema = new Schema(
@@ -27,7 +28,6 @@ const userSchema = new Schema(
             type: String,
             required: [true, "A password is needed!"],
             minLength: [1, "Password too short"]
-            // match: [/^(?=.*[0-9]).{8,}$/, "Password must be 8 characters long and contain at least one number"]
         },
         avatar: {
             type: String,

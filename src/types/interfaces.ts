@@ -17,15 +17,6 @@ export interface UserModel extends Document {
     avatar: string;
 }
 
-export interface UserInterface {
-    username: string,
-    email: string,
-    password: number,
-    avatar?: string,
-    favoriteRestaurants?: Types.ObjectId[];
-    createdRestaurants?: Types.ObjectId[];
-}
-
 export interface ReviewInterface {
     name: string,
     date: string,

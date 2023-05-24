@@ -1,9 +1,9 @@
-import { Request, Response, NextFunction } from "express";
 import Restaurant from "@/models/Restaurant.model";
-import { ModelAdaptedRestaurant } from "@/types/interfaces";
 import User from "@/models/User.model";
+import { Request, Response, NextFunction } from "express";
+import { ModelAdaptedRestaurant } from "@/types/interfaces";
 
-export const listAllRestaurants = (req: Request, res: Response) => {
+export const listAllRestaurants = (_req: Request, res: Response) => {
     Restaurant
         .find()
         .sort({ createdAt: -1 })

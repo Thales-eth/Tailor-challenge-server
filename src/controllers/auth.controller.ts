@@ -1,6 +1,6 @@
+import User from '@/models/User.model'
 import { Request, Response, NextFunction } from "express";
 import { ExtendedPayloadRequest, UserModel } from '@/types/interfaces'
-import User from '@/models/User.model'
 
 export const getLoggedUser = (req: ExtendedPayloadRequest, res: Response) => {
     const { _id: user_id } = req.payload
@@ -39,7 +39,6 @@ export const login = (req: Request, res: Response, next: NextFunction) => {
 export const signup = (req: Request, res: Response, next: NextFunction) => {
     const { username, email, password, avatar }: { username: string, email: string, password: string, avatar: string } = req.body
 
-    console.log("EL AVATAR DESDE EL BACK ==>", avatar)
     // I have not been able to cast createdUser directly to be a UserModel type document
     // That's why I needed a second query using findById :(
     User
