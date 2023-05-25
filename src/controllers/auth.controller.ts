@@ -1,6 +1,6 @@
-import User from '@/models/User.model'
+import User from '../models/User.model'
 import { Request, Response, NextFunction } from "express";
-import { ExtendedPayloadRequest, UserModel } from '@/types/interfaces'
+import { ExtendedPayloadRequest, UserModel } from '../types/interfaces'
 
 export const getLoggedUser = (req: ExtendedPayloadRequest, res: Response) => {
     const { _id: user_id } = req.payload

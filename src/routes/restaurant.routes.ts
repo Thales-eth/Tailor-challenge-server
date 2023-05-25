@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { listAllRestaurants, getOneRestaurant, createOneRestaurant, editOneRestaurant, deleteOneRestaurant } from "@/controllers/restaurants.controller"
+import { listAllRestaurants, getOneRestaurant, createOneRestaurant, editOneRestaurant, deleteOneRestaurant } from "../controllers/restaurants.controller"
 
 const router = Router()
 

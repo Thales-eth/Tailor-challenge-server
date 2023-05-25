@@ -5,11 +5,11 @@ experienced users to create more restaurants and display them on the web.
 
 # Deployed API
 
-The deployed API can be found at the link: "####"
+The deployed API can be found at the link: "https://tailorchallenge.fly.dev"
 
-All the routes described in the "API Routes" section are valid endpoints against this URL. For example, "####/api/restaurants/list"
+All the routes described in the "API Routes" section are valid endpoints against this URL. For example, "https://tailorchallenge.fly.dev/api/restaurants/list"
 
-The complete deployed application can be found at the following link: "####"
+The complete deployed application can be found at the following link: "https://tailor-challenge-client-rho.vercel.app"
 
 # Environment Variables
 

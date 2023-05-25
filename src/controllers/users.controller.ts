@@ -1,6 +1,6 @@
-import User from '@/models/User.model'
+import User from '../models/User.model'
 import { Response } from "express";
-import { ExtendedPayloadRequest } from "@/types/interfaces";
+import { ExtendedPayloadRequest } from "../types/interfaces";
 
 export const getFavoriteRestaurants = (req: ExtendedPayloadRequest, res: Response): void => {
     const { _id: user_id } = req.payload

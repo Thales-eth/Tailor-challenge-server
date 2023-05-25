@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs"
 import jwt from 'jsonwebtoken'
-import { DEFAULT_AVATAR } from '@/consts/index'
+import { DEFAULT_AVATAR } from '../consts/index'
 import { Schema, model } from "mongoose";
 
 const saltRounds: number = +process.env.SALT

@@ -1,6 +1,6 @@
-import verifyToken from '@/middleware/verifyToken'
+import verifyToken from '../middleware/verifyToken'
 import { Router } from "express"
-import { getLoggedUser, login, signup } from "@/controllers/auth.controller"
+import { getLoggedUser, login, signup } from "../controllers/auth.controller"
 
 const router = Router()
 

@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { getFavoriteRestaurants, likeRestaurant, dislikeRestaurant } from "@/controllers/users.controller"
+import { getFavoriteRestaurants, likeRestaurant, dislikeRestaurant } from "../controllers/users.controller"
 
 const router = Router()
 
