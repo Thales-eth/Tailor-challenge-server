@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { Request, Response } from "express"
 
 export const uploadPicture = (req: Request, res: Response) => {
     if (!req.file.path) {

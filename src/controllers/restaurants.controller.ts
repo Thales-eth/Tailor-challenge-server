@@ -1,7 +1,7 @@
-import Restaurant from "../models/Restaurant.model";
-import User from "../models/User.model";
-import { Request, Response, NextFunction } from "express";
-import { ModelAdaptedRestaurant } from "../types/interfaces";
+import Restaurant from "../models/Restaurant.model"
+import User from "../models/User.model"
+import { Request, Response, NextFunction } from "express"
+import { ModelAdaptedRestaurant } from "../types/interfaces"
 
 export const listAllRestaurants = (_req: Request, res: Response) => {
     Restaurant

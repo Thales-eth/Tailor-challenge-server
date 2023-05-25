@@ -1,4 +1,4 @@
-import { expressjwt } from "express-jwt";
+import { expressjwt } from "express-jwt"
 import { Request } from "express"
 
 const verifyToken = expressjwt({

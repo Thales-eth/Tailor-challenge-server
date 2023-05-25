@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs"
 import jwt from 'jsonwebtoken'
 import { DEFAULT_AVATAR } from '../consts/index'
-import { Schema, model } from "mongoose";
+import { Schema, model } from "mongoose"
 
 const saltRounds: number = +process.env.SALT
 
@@ -43,7 +43,7 @@ const userSchema = new Schema(
     {
         timestamps: true
     }
-);
+)
 
 userSchema.pre("save", async function (next) {
 
@@ -63,7 +63,7 @@ userSchema.methods.comparePassword = function (plainPwd: string) {
 }
 
 userSchema.methods.signToken = function () {
-    const { _id, email, username } = this;
+    const { _id, email, username } = this
     const payload = { _id, email, username }
 
     const authToken = jwt.sign(
@@ -75,6 +75,6 @@ userSchema.methods.signToken = function () {
     return authToken
 }
 
-const User = model("User", userSchema);
+const User = model("User", userSchema)
 
 export default User

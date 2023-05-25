@@ -1,10 +1,10 @@
-import { Application, ErrorRequestHandler } from "express";
+import { Application, ErrorRequestHandler } from "express"
 
 export default (app: Application) => {
     app.use((_req, res) => {
-        res.status(404).json({ message: "This route does not exist" });
+        res.status(404).json({ message: "This route does not exist" })
         return
-    });
+    })
 
     const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
         console.error("ERROR", req.method, req.path, err)
@@ -28,8 +28,8 @@ export default (app: Application) => {
             return
         }
 
-        next(err);
-    };
+        next(err)
+    }
 
     app.use(errorHandler)
-};
+}

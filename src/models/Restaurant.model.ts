@@ -1,3 +1,4 @@
+import { DEFAULT_RESTAURANT_PIC } from "@/consts"
 import { Schema, model } from "mongoose"
 
 const restaurantSchema = new Schema(
@@ -27,8 +28,8 @@ const restaurantSchema = new Schema(
         },
         image: {
             type: String,
-            default: "https://res.cloudinary.com/dagndlfhj/image/upload/v1684567317/shawnanggg-nmpW_WwwVSc-unsplash_1_pqwgtk.jpg",
-            set: (value: string) => !value ? "https://res.cloudinary.com/dagndlfhj/image/upload/v1684567317/shawnanggg-nmpW_WwwVSc-unsplash_1_pqwgtk.jpg"
+            default: DEFAULT_RESTAURANT_PIC,
+            set: (value: string) => !value ? DEFAULT_RESTAURANT_PIC
                 :
                 value
         },

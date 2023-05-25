@@ -1,5 +1,5 @@
 import User from '../models/User.model'
-import { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from "express"
 import { ExtendedPayloadRequest, UserModel } from '../types/interfaces'
 
 export const getLoggedUser = (req: ExtendedPayloadRequest, res: Response) => {
@@ -18,8 +18,8 @@ export const login = (req: Request, res: Response, next: NextFunction) => {
     const { email, password: plainPassword } = req.body
 
     if (email === '' || plainPassword === '') {
-        res.status(400).json({ err: ["Provide email and password."] });
-        return;
+        res.status(400).json({ err: ["Provide email and password."] })
+        return
     }
 
     User
