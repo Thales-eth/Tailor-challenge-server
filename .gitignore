@@ -30,3 +30,8 @@ dist/**/*
 # VS Code
 .vscode/*
 
+# Deploy
+
+.dockerignore
+Dockerfile
+fly.toml
